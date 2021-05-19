@@ -19,7 +19,7 @@ ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 10px;
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -31,9 +31,17 @@ ul {
 .menu-links ul li {
     display: inline-block;
     padding-right: 20px;
+    text-decoration: none;
 }
 
-.search, .cart {
+.menu-links ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+.search, 
+.cart {
    font-size: 20px;
 }
 
@@ -53,12 +61,17 @@ ul {
     font-size: 200px;
     text-transform: uppercase;
     font-weight: 700;
-    color: #000;   
+}
+
+.tagline {
+    flex: 1;
+    font-size:  30px;
+    color: #999;
 }
 
 .pages {
     flex: 0;
-    letter-spacing:5px;
+    letter-spacing: 5px;
     color: #999; 
 }
 
@@ -91,7 +104,7 @@ ul {
 }
 
 .desc p:nth-child(2) {
-    line: height 2px;
+    line-height: 2;
 }
 
 .desc span {
@@ -99,12 +112,94 @@ ul {
 }
 .juice {
     position: absolute;
+    top: 55%;
+    left: 50%;
+    z-index: 1;
+}    
+
+.juice img {
+    animation: float 4s ease-in-out infinite;
+    max-height: 600px;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(-50%, -46%);
+    }
+    50% {
+        transform: translate(-50%, -54%);
+    }
+    100% {
+        transform: translate(-50%, -46%);
+    }
+}
+
+.leaves {
+    width: 100%;
+    height: 100%;
+    position: absolute;
     top: 50%;
     left: 50%;
     z-index: 1;
-    animation: float 4s ease-in-out infinite;
 }
 
-.juice img {
-    max-height: 600px;
+.leaves img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.leaves .layer:nth-child(1) {
+    top: -100px !important;
+    left: -480px !important;
+}
+
+.leaves .layer:nth-child(2) {
+    top: 10px !important;
+    left: 160px !important;
+}
+
+.leaves .layer:nth-child(3) {
+    top: -300px !important;
+    left: 160px !important;
+}
+
+.leaves .layer:nth-child(4) {
+    top: -10px !important;
+    left: 320px !important;
+}
+
+.leaves .layer:nth-child(5) {
+    top: 200px !important;
+    left: -320px !important;
+}
+
+.arrows .prev {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+}
+
+.arrows .next {
+    position: absolute;
+    top: 50%;
+    right: 100px;
+}
+
+.arrows button {
+    border: 1px solid #999;
+    background: transparent;
+    padding: 20px;
+    border-radius: 50%;
+    outline: none;
+}
+
+.arrows button:hover {
+   color: #fff;
+   background: #000;
+}
+
+
+.orange img{
+    max-width: 100px;
+    max-height: 100px;
 }
